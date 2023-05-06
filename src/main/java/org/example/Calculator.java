@@ -2,6 +2,11 @@ package org.example;
 
 public class Calculator {
     public static void main(String[] args) {
+        if (args.length != 3) {
+            System.out.println("Usage: java -jar Calculator.jar <value1> <value2> <operation>");
+            System.out.println("Operations: +, -, *, /");
+            System.exit(1);
+        }
         int a = Integer.parseInt(args[0]);
         int b = Integer.parseInt(args[1]);
         String operation = args[2];
